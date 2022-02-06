@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BotApp.DataAccess\BotApp.DataAccess.csproj" />
+    <ProjectReference Include="..\..\BotApp.Domain\BotApp.Domain.csproj" />
+    <ProjectReference Include="..\..\BotApp.Service\BotApp.Service.csproj" />
+    <ProjectReference Include="..\MiniSchool.Service\MiniSchool.Service.csproj" />
+  </ItemGroup>
+
+</Project>

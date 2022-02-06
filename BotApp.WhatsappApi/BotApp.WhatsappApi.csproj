@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Extensions\**" />
+    <Compile Remove="Model\**" />
+    <Content Remove="Extensions\**" />
+    <Content Remove="Model\**" />
+    <EmbeddedResource Remove="Extensions\**" />
+    <EmbeddedResource Remove="Model\**" />
+    <None Remove="Extensions\**" />
+    <None Remove="Model\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\UssdController.cs" />
+    <Compile Remove="WebHookFieldValidation.cs" />
+    <Compile Remove="WebHookHandler.cs" />
+    <Compile Remove="WebHookRender.cs" />
+    <Compile Remove="WhatsappResponse.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BotApp.DataAccess\BotApp.DataAccess.csproj" />
+    <ProjectReference Include="..\BotApp.Service\BotApp.Service.csproj" />
+  </ItemGroup>
+
+</Project>
