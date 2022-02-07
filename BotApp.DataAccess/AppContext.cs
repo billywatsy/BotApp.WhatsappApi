@@ -26,7 +26,9 @@ namespace BotApp.DataAccess
         public DbSet<WhatsAppPhone> WhatsAppPhones { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=156.38.224.15;database=imonitor_whatsapp;user=imonitor_whatsapp;password=7b!og09C");
+            // save connection to app config
+            var connection = System.Configuration.ConfigurationManager.AppSettings["DbConn"];
+            optionsBuilder.UseSqlServer(connection);
         }
 
     }
